@@ -5,175 +5,189 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Recipe</title>
 </head>
 <body>
 
     <!--- Navigation Bar -->
-    <div >
-        <nav >
-            <h1>Cook.time</h1>
-            <div>
+    <div class="header">
+        <nav class="nav-bar">
+            <h1 class="judul">Cook.time</h1>
+            <div class="menu-bar">
                 <ul>
                     <li><a >Home</a></li>
                     <li><a >About</a></li>
                     <li><a >Contact</a></li>
-                </ul>
+                </ul#>
             </div>
         </nav>
 
         <!-- Search Bar -->
         
-        <div >Your desired dish ?</div>
-        <div >
-            <div></div>
-            <input type="text" name=""  id="search" placeholder="What do you want to eat?" >
-            <div ></div>
+        <div class="title" >Your desired dish ?</div>
+        <div class="search-wrapper">
+            <div class="fa fa-search"></div>
+            <input type="text" name=""  id="search" placeholder="What do you want to eat?" onkeyup="search()" >
+            <div class="fa fa-times" onclick="clearInput()"></div>
         </div>
        
     </div>
 
     <!-- Search Results -->
-        <div >
+        <div class="result">
             <h1>Your Search Result: </h1>
         </div>
         
         <!-- Main Content -->
-        <div >
-            <div>
-                <p>Sorry, the food you were looking for was not available.</p>
+        <div class="card-grid">
+            <div class="food-list">
+                <p id="none" style="display:none ;">Sorry, the food you were looking for was not available.</p>
                 
-                <div>
-                    <div >
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
                         <img src="./image/detail-banner.png">
                     </div>
-                    <div >
+                    <div class="card-body">
                     <h3> Sisig </h3>
                     </div>
-                    <div>
-                        <button class="btn">Get Recipe</button>
+                    <div class="card-footer">
+                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
                     </div>
                 </div>
 
-                <div>
-                    <div >
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
                         <img src="./image/detail-banner.png">
                     </div>
-                    <div >
+                    <div class="card-body">
                     <h3> Sisig </h3>
                     </div>
-                    <div>
-                        <button class="btn">Get Recipe</button>
+                    <div class="card-footer">
+                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
                     </div>
                 </div>
 
-                <div>
-                    <div >
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
                         <img src="./image/detail-banner.png">
                     </div>
-                    <div >
+                    <div class="card-body">
                     <h3> Sisig </h3>
                     </div>
-                    <div>
-                        <button class="btn">Get Recipe</button>
+                    <div class="card-footer">
+                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
                     </div>
                 </div>
 
-                <div>
-                    <div >
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
                         <img src="./image/detail-banner.png">
                     </div>
-                    <div >
+                    <div class="card-body">
                     <h3> Sisig </h3>
                     </div>
-                    <div>
-                        <button class="btn">Get Recipe</button>
+                    <div class="card-footer">
+                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
                     </div>
                 </div>
 
-                <div>
-                    <div >
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
                         <img src="./image/detail-banner.png">
                     </div>
-                    <div >
+                    <div class="card-body">
                     <h3> Sisig </h3>
                     </div>
-                    <div>
-                        <button class="btn">Get Recipe</button>
+                    <div class="card-footer">
+                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
                     </div>
                 </div>
 
-                <div>
-                    <div >
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
                         <img src="./image/detail-banner.png">
                     </div>
-                    <div >
+                    <div class="card-body">
                     <h3> Sisig </h3>
                     </div>
-                    <div>
-                        <button class="btn">Get Recipe</button>
+                    <div class="card-footer">
+                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
                     </div>
                 </div>
 
-                <div>
-                    <div >
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
                         <img src="./image/detail-banner.png">
                     </div>
-                    <div >
+                    <div class="card-body">
                     <h3> Sisig </h3>
                     </div>
-                    <div>
-                        <button class="btn">Get Recipe</button>
+                    <div class="card-footer">
+                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
                     </div>
                 </div>
 
-                <div>
-                    <div >
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
                         <img src="./image/detail-banner.png">
                     </div>
-                    <div >
+                    <div class="card-body">
                     <h3> Sisig </h3>
                     </div>
-                    <div>
-                        <button class="btn">Get Recipe</button>
+                    <div class="card-footer">
+                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
+                    </div>
+                </div>
+                
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./image/detail-banner.png">
+                    </div>
+                    <div class="card-body">
+                    <h3> Sisig </h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
                     </div>
                 </div>
 
-                <div>
-                    <div >
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
                         <img src="./image/detail-banner.png">
                     </div>
-                    <div >
+                    <div class="card-body">
                     <h3> Sisig </h3>
                     </div>
-                    <div>
-                        <button class="btn">Get Recipe</button>
+                    <div class="card-footer">
+                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
                     </div>
                 </div>
 
-                <div>
-                    <div >
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
                         <img src="./image/detail-banner.png">
                     </div>
-                    <div >
+                    <div class="card-body">
                     <h3> Sisig </h3>
                     </div>
-                    <div>
-                        <button class="btn">Get Recipe</button>
+                    <div class="card-footer">
+                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
                     </div>
                 </div>
 
-                <div>
-                    <div >
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
                         <img src="./image/detail-banner.png">
                     </div>
-                    <div >
+                    <div class="card-body">
                     <h3> Sisig </h3>
                     </div>
-                    <div>
-                        <button class="btn">Get Recipe</button>
+                    <div class="card-footer">
+                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
                     </div>
                 </div>
+
             </div> 
         </div>
 
