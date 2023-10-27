@@ -200,12 +200,12 @@ body{
     padding: var(--padding);
     padding-top: 0;
     text-align: center;
-    color: var(--color4);
+    color: #000000;
 }
   
 .btn {
-    background: var(--bg);
-    color: var(--color4);
+    background: #F77F00;
+    color: #000000;
     border: 2px solid var(--color);
     font-size: 1rem;
     padding: .5em .75em;
@@ -217,9 +217,43 @@ body{
 .btn:hover, .btn:focus {
     transform: translateY(-3px);
     background-color: transparent;
-    border: 2px solid var(--bg);
-    color: var(--color3);
+    border: 2px solid #F77F00;
+    color:  #000000;
 }
+
+
+footer {
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #FCBF49;
+    
+}
+
+.social-btn{
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 2rem;
+    
+}
+.social-btn a{
+
+    color:  #F77F00;
+}
+
+
+
+.copy{
+    text-align: center;
+    color:  #000000;
+}
+
+
 
 
 
