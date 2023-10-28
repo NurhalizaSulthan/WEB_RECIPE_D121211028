@@ -79,6 +79,8 @@ body{
 }
 
 
+
+
 .search-wrapper{
     display: flex;
     align-items: center;
@@ -111,6 +113,42 @@ body{
 .fa:hover{
     color: #F77F00;
 }
+
+
+/* Gaya filter */
+.filter {
+    text-align: right;
+    margin: 2rem auto;
+}
+
+.filter label {
+    font-size: 1.2rem;
+    color: #1E1D1D;
+}
+
+.filter input[type="text"] {
+    padding: 0.5rem;
+    width: 20%;
+    height:  3rem;
+    border: 1px solid #000000;
+    border-radius: 0.5rem;
+    outline: none;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.filter button {
+    background: #F77F00;
+    color: #000000;
+    height:  3rem;
+    border: 2px solid #F77F00;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
 
 .result{
     text-align: center;

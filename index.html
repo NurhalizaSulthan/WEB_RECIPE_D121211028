@@ -31,9 +31,16 @@
             <input type="text" name=""  id="search" placeholder="What do you want to eat?" onkeyup="search()" >
             <div class="fa fa-times" onclick="clearInput()"></div>
         </div>
-       
+
+               
     </div>
 
+        <!-- Filter -->
+        <div class="filter">
+            <input type="text" id="ingredientFilter" placeholder="Enter ingredient to exclude">
+            <button onclick="applyFilter()">Apply Filter</button>
+        </div>
+        
     <!-- Search Results -->
         <div class="result">
             <h1>Your Search Result: </h1>
@@ -201,6 +208,6 @@
             </div>
             <p class="copy">Copyright &copy; Pemrograman web Project 2023</p>              
         </footer>
-        
+        <script src="script.js"></script>       
 </body>
 </html>
