@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Recipe</title>
 </head>
+
 <body>
 
     <!--- Navigation Bar -->
@@ -16,198 +18,95 @@
             <h1 class="judul">Cook.time</h1>
             <div class="menu-bar">
                 <ul>
-                    <li><a >Home</a></li>
-                    <li><a >About</a></li>
-                    <li><a >Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Contact</a></li>
                 </ul>
             </div>
         </nav>
 
         <!-- Search Bar -->
-        
-        <div class="title" >Your desired dish ?</div>
-        <div class="search-wrapper">
-            <div class="fa fa-search"></div>
-            <input type="text" name=""  id="search" placeholder="What do you want to eat?" onkeyup="search()" >
-            <div class="fa fa-times" onclick="clearInput()"></div>
+
+        <div class="title">Your desired dish ?</div>
+        <div class="meal-search-box">
+            <input type="text" class="search-control" placeholder="What do you want to eat?" id="search-input">
+            <button type="submit" class="search-btn btn" id="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
         </div>
 
-               
+
     </div>
 
-        <!-- Filter -->
-        <div class="filter">
-            <input type="text" id="ingredientFilter" placeholder="Enter ingredient to exclude">
-            <button onclick="applyFilter()">Apply Filter</button>
-        </div>
-        
+    <!-- Filter -->
+    <div class="filter">
+        <input type="text" id="ingredientFilter" placeholder="Enter ingredient to exclude">
+        <button onclick="applyFilter()">Apply Filter</button>
+    </div>
+
     <!-- Search Results -->
-        <div class="result">
-            <h1>Your Search Result: </h1>
+    <div class="result">
+        <h1>Your Search Result: </h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="card-grid">
+        <div class="food-list" id="meal">
+
+
+       <!-- <div class="card card-shadow">
+                <div class="card-header card-image">
+                    <img src="./image/detail-banner.png">
+                </div>
+                <div class="card-body">
+                    <h3> Sisig </h3>
+                </div>
+                <div class="card-footer">
+                    <button class="button" onclick="getRecipeDetails()">Get Recipe</button>
+                    <button class="like-btn" onclick="sukaResep(this)">
+                        <i class="far fa-heart"></i>
+                </div>
+            </div>  -->
+
         </div>
-        
-        <!-- Main Content -->
-        <div class="card-grid">
-            <div class="food-list">
-                <p id="none" style="display:none ;">Sorry, the food you were looking for was not available.</p>
-                
-                <div class="card card-shadow">
-                    <div class="card-header card-image">
-                        <img src="./image/detail-banner.png">
-                    </div>
-                    <div class="card-body">
-                    <h3> Sisig </h3>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
-                    </div>
-                </div>
-
-                <div class="card card-shadow">
-                    <div class="card-header card-image">
-                        <img src="./image/detail-banner.png">
-                    </div>
-                    <div class="card-body">
-                    <h3> Sisig </h3>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
-                    </div>
-                </div>
-
-                <div class="card card-shadow">
-                    <div class="card-header card-image">
-                        <img src="./image/detail-banner.png">
-                    </div>
-                    <div class="card-body">
-                    <h3> Sisig </h3>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
-                    </div>
-                </div>
-
-                <div class="card card-shadow">
-                    <div class="card-header card-image">
-                        <img src="./image/detail-banner.png">
-                    </div>
-                    <div class="card-body">
-                    <h3> Sisig </h3>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
-                    </div>
-                </div>
-
-                <div class="card card-shadow">
-                    <div class="card-header card-image">
-                        <img src="./image/detail-banner.png">
-                    </div>
-                    <div class="card-body">
-                    <h3> Sisig </h3>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
-                    </div>
-                </div>
-
-                <div class="card card-shadow">
-                    <div class="card-header card-image">
-                        <img src="./image/detail-banner.png">
-                    </div>
-                    <div class="card-body">
-                    <h3> Sisig </h3>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
-                    </div>
-                </div>
-
-                <div class="card card-shadow">
-                    <div class="card-header card-image">
-                        <img src="./image/detail-banner.png">
-                    </div>
-                    <div class="card-body">
-                    <h3> Sisig </h3>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
-                    </div>
-                </div>
-
-                <div class="card card-shadow">
-                    <div class="card-header card-image">
-                        <img src="./image/detail-banner.png">
-                    </div>
-                    <div class="card-body">
-                    <h3> Sisig </h3>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
-                    </div>
-                </div>
-
-                <div class="card card-shadow">
-                    <div class="card-header card-image">
-                        <img src="./image/detail-banner.png">
-                    </div>
-                    <div class="card-body">
-                    <h3> Sisig </h3>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
-                    </div>
-                </div>
-
-                <div class="card card-shadow">
-                    <div class="card-header card-image">
-                        <img src="./image/detail-banner.png">
-                    </div>
-                    <div class="card-body">
-                    <h3> Sisig </h3>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
-                    </div>
-                </div>
-
-                <div class="card card-shadow">
-                    <div class="card-header card-image">
-                        <img src="./image/detail-banner.png">
-                    </div>
-                    <div class="card-body">
-                    <h3> Sisig </h3>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
-                    </div>
-                </div>
-
-                <div class="card card-shadow">
-                    <div class="card-header card-image">
-                        <img src="./image/detail-banner.png">
-                    </div>
-                    <div class="card-body">
-                    <h3> Sisig </h3>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
-                    </div>
-                </div>
-
-            </div> 
-        </div>
+    </div>
 
 
-        <footer>
-            <div class="social-btn">
-                <a href="https://www.facebook.com/Cmedsss" target="_blank" ><i class="	fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/tiaanmeds/" target="_blank" ><i class="	fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/tianmeds/" target="_blank"><i class="	fab fa-linkedin"></i></a>
-                <a href="https://github.com/TianMeds" target="_blank" "><i class="	fab fa-github"></i></a>
+    <div class="meal-details">
+        <!-- recipe close btn -->
+        <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+        <!-- meal content -->
+        <div id="meal-details-content">
+            <!-- <h2 class="recipe-title">Meals Name Here</h2>
+            <p class="recipe-category">Category Name</p>
+            <div class="recipe-instruct">
+                <h3>Instructions:</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae consequuntur asperiores quo dolore reprehenderit omnis explicabo, dolor earum suscipit, aliquid molestias amet et modi animi dolorum! Inventore tempora ullam vel.</p>
             </div>
-            <p class="copy">Copyright &copy; Pemrograman web Project 2023</p>              
-        </footer>
-        <script src="script.js"></script>       
+            <div class="recipe-meal-img">
+                <img src="food.jpg" alt="">
+            </div>
+            <div class="recipe-link">
+                <a href="#" target="_blank">Watch Video</a>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+
+    <footer>
+        <div class="social-btn">
+            <a href="https://www.facebook.com/Cmedsss" target="_blank"><i class="	fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/tiaanmeds/" target="_blank"><i class="	fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/tianmeds/" target="_blank"><i class="	fab fa-linkedin"></i></a>
+            <a href="https://github.com/TianMeds" target="_blank" ><i class=" fab fa-github"></i></a>
+        </div>
+        <p class="copy">Copyright &copy; Pemrograman web Project 2023</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
