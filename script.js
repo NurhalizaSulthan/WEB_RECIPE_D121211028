@@ -1,77 +1,105 @@
 window.onload = function(){
 
-    
+//Mendapatkan elemen-elemen HTML yang diperlukan
   const searchBtn = document.getElementById('search-btn');
   const mealList = document.getElementById('meal');
   const mealDetailsContent = document.getElementById('meal-details-content');
   const recipeCloseBtn = document.getElementById('recipe-close-btn');
+  const countrySelect = document.getElementById('countrySelect');
 
   
   searchBtn.addEventListener('click', getMealList);
   mealList.addEventListener('click', getRecipe);
   recipeCloseBtn.addEventListener('click', ()=>{
       mealDetailsContent.parentElement.classList.remove('showRecipe');
-  })
+  });
 
 
+  // Menambahkan event listener untuk pemilihan negara pada dropdown
+  countrySelect.addEventListener('change', () => {
+    const selectedCountry = countrySelect.value;
+    if (selectedCountry === '') {
+        getMealList();
+    } else {
+        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${selectedCountry}`)
+            .then(response => response.json())
+            .then(data => renderMeals(data.meals));
+        }
+   });
 
+   // Mengambil daftar negara dari API dan menambahkannya ke dropdown
+   fetch('https://www.themealdb.com/api/json/v1/1/list.php?a=list')
+    .then(response => response.json())
+    .then(data => {
+      data.meals.forEach(country => {
+        appendCountryOption(country.strArea);
+      });
+    });
+
+  // Fungsi untuk mengambil daftar makanan berdasarkan kata kunci pencarian
   function getMealList(){
       let searchInputTxt = document.getElementById('search-input').value.trim();
-      // console.log(searchInputTxt)
       fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`)
       .then(response => response.json())
-      .then(data => {
-         
-          let html ="";
-          if(data.meals){
-              data.meals.forEach(meal => {
-                  html +=`
-
-                <div class="card card-shadow" data-id="${meal.idMeal} ">
-                  <div class="card-header card-image">
-                      <img src="${meal.strMealThumb}">
-                  </div>
-                  <div class="card-body">
-                      <h3> ${meal.strMeal} </h3>
-                  </div>
-                  <div class="card-footer">
-                      <button class="button recipe-btn">Get Recipe</button>
-                      <button class="like-btn" onclick="sukaResep(this)">
-                          <i class="far fa-heart"></i>
-                </div>
-            </div>`;
-              });
-              mealList.classList.remove('notFound')
-          }
-          else{
-              html = "Sorry, We didn't find any meal!";
-              mealList.classList.add('notFound')
-          }
-          mealList.innerHTML = html; 
-
-          const recipeButtons = document.querySelectorAll('.recipe-btn');
-            recipeButtons.forEach(button => {
-                button.addEventListener('click', getRecipe);
-            });
-
-      });
-      
+      .then(data => renderMeals(data.meals));
   };
 
+
+  //fungsi untuk menampilkan daftar makanan
+  function renderMeals(meals) {
+    let html = '';
+    if (meals) {
+      meals.forEach(meal => {
+        html += createMealCard(meal);
+      });
+      mealList.classList.remove('notFound');
+    } else {
+      html = "Sorry, We didn't find any meal!";
+      mealList.classList.add('notFound');
+    }
+    mealList.innerHTML = html;
+  }
+
+
+  //fungsi untuk membuat kartu makanan berdasarkan data makanan
+  function createMealCard(meal) {
+    return `
+      <div class="card card-shadow" data-id="${meal.idMeal}">
+        <div class="card-header card-image">
+            <img src="${meal.strMealThumb}">
+        </div>
+        <div class="card-body">
+            <h3>${meal.strMeal}</h3>
+        </div>
+        <div class="card-footer">
+            <button class="button recipe-btn">Get Recipe</button>
+            <i class="far fa-heart" data-liked="false"></i>
+        </div>
+      </div>`;
+  }
+
+  //fungsi untuk menambahkan opsi negara ke dropdown
+  function appendCountryOption(countryName) {
+    const option = document.createElement('option');
+    option.value = countryName;
+    option.textContent = countryName;
+    countrySelect.appendChild(option);
+  }
+  
+  // Fungsi untuk mendapatkan resep makanan ketika tombol "Get Recipe" diklik
   function getRecipe(e){
       e.preventDefault();
       if(e.target.classList.contains('recipe-btn')){
           let mealItem = e.target.parentElement.parentElement;
           fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
           .then(response=> response.json())
-          .then(data => mealRecipeModal(data.meals))
+          .then(data => mealRecipeModal(data.meals[0]))
       }
       
   };
 
+  // Fungsi untuk menampilkan tampilan resep makanan
   function mealRecipeModal(meal){
-    meal = meal[0];
-    // Bahan dalam format terpisah
     const ingredients = [];
 
     // Menyusun data bahan menjadi array
@@ -83,7 +111,7 @@ window.onload = function(){
         }
     }
 
-    let html= `
+    const html= `
         <h2 class="recipe-title">${meal.strMeal}</h2>
         <div class="recipe-meal-img">
             <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
