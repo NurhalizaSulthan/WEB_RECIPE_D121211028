@@ -122,37 +122,34 @@ body{
 }
 
 
-/* favorite rescipe*/
-.fav-container {
-    background-color: #f7d7da;
-    padding: 0.25rem 1rem;
-    text-align: center;
-}
-
-.fav-meals {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-}
-
 /* dropdown Select-Country */
 
-.country-dropdown {
-    text-align: left;
-    margin: 1rem 1.2rem;
+.dropdown-filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
 }
 
-.country-dropdown label {
+.country-dropdown,
+.category-dropdown {
+    text-align: left;
+    box-sizing: border-box;
+}
+
+
+.country-dropdown label,
+.category-dropdown label {
     font-size: 1.2rem;
     color: #1E1D1D;
     font-weight: bold;
-    display: block
+    display: block;
 }
 
-.country-dropdown select {
-    width: 18%;
+
+.country-dropdown select,
+.category-dropdown select {
+    width: 100%;
     padding: 0.5rem;
     border: 1px solid #000000;
     border-radius: 0.5rem;
@@ -162,6 +159,7 @@ body{
     cursor: pointer;
     transition: all 300ms ease-in-out;    	
 }
+
 
 
 
@@ -252,7 +250,7 @@ body{
     text-align: center;
     color: #000000;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
   
 .button {
@@ -440,6 +438,7 @@ footer {
     text-align: center;
     color:  #000000;
 }
+
 
 
 
