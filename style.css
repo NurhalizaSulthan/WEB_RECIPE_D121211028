@@ -184,7 +184,7 @@ body{
     padding: 16px 0px 100px;
     justify-content: center;
     overflow: auto;
-    min-height: 100%;
+    min-height: 50%;
     text-align: center;
 }
 
@@ -323,9 +323,6 @@ body{
 .meal-details-content p:not(.recipe-category){
     padding: 3rem 0;
 }
-
-
-
 
 
 .recipe-close-btn{
