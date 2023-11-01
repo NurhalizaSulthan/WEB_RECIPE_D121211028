@@ -15,7 +15,7 @@ Cook.time adalah aplikasi web yang memungkinkan pengguna mencari resep berdasark
 
 ## Pengembangan
 
-Aplikasi ini dibangun menggunakan HTML, CSS, JavaScript dan MealDB API: https://www.themealdb.com/api.php.
+Aplikasi ini dibangun menggunakan HTML, CSS, JavaScript dan menggunakan MealDB API: https://www.themealdb.com/api.php.
 
 ## penggunaan aplikasi
 
