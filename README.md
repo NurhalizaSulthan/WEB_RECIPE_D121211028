@@ -2,8 +2,6 @@ Tugas UTS Pemrograman WEB
 Membuat Web Recipes
 Siti Nurhaliza | D121211028 | Teknik Informatika A
 
-<<<<<<< HEAD
-
 # Cook.time Recipe Website
 
 Cook.time adalah aplikasi web yang memungkinkan pengguna mencari resep berdasarkan nama hidangan, negara asal, dan kategori. sehingga akan memberikan daftar resep kepada pengguna dan memungkinkan mereka melihat informasi deatail tentang setiap resep, termasuk bahan, petunjuk, dan bahkan menonton video jika tersedia.
@@ -33,6 +31,6 @@ Aplikasi ini dibangun menggunakan HTML, CSS, JavaScript dan MealDB API: https://
 
 6. Pada detail resep akan dimunculkan judul, gambar, ingredients, introductions, dan link video resep yang dapat di klik untuk menonton tutorial resep.
 
-7. # untuk kembali ke halaman utama dapat men klik home pada navbar.
+7. untuk kembali ke halaman utama dapat men klik home pada navbar.
 
-> > > > > > > 7fc7b2579c9ade168213e41f8e7224f2efeebe33
+
