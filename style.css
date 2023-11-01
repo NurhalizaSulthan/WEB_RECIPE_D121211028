@@ -184,7 +184,7 @@ body{
     padding: 16px 0px 100px;
     justify-content: center;
     overflow: auto;
-    min-height: 50%;
+    min-height: 100%;
     text-align: center;
 }
 
