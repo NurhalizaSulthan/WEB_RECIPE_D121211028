@@ -122,7 +122,7 @@ body{
 }
 
 
-/* dropdown Select-Country */
+/* dropdown Select-Country and Select-Category */
 
 .dropdown-filter{
     display: flex;
@@ -415,7 +415,6 @@ footer {
 }
 
 .social-btn{
-    position: sticky;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
