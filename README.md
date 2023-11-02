@@ -23,6 +23,7 @@ Java script : menghubungkan dengan API yang digunakan untuk mencari resep dan me
 meal
 
 TheMealDB API : https://www.themealdb.com/api.php.
+
 Link ke demo proyek: https://nurhalizasulthan.github.io/WEB_RECIPE_D121211028/
 
 ## penggunaan aplikasi
