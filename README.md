@@ -13,9 +13,15 @@ Cook.time adalah aplikasi web yang memungkinkan pengguna mencari resep berdasark
 - **Filter Berdasarkan Kategori**: Pengguna dapat memfilter resep dengan memilih kategori tertentu dari menu dropdown.
 - **Lihat Detail Resep**: Pengguna dapat mengklik button "get recipe" untuk melihat informasi rinci, termasuk bahan, petunjuk, dan link untuk menonton video jika tersedia.
 
+TheMealDB API : https://www.themealdb.com/api.php.
+Link ke demo proyek: https://nurhalizasulthan.github.io/WEB_RECIPE_D121211028/
+
 ## Pengembangan
 
-Aplikasi ini dibangun menggunakan HTML, CSS, JavaScript dan menggunakan MealDB API: https://www.themealdb.com/api.php.
+HTML:  kerangka dasar situs web dan mengatur struktur halaman. 
+CSS : mengatur tampilan dan gaya situs web.
+Java script : menghubungkan dengan API yang digunakan untuk mencari resep dan menampilkan detailnya dan mengatur berbagai tindakan dan respons pengguna di situs web.
+meal
 
 ## penggunaan aplikasi
 
@@ -23,7 +29,7 @@ Aplikasi ini dibangun menggunakan HTML, CSS, JavaScript dan menggunakan MealDB A
 
 2. Gunakan kotak pencarian untuk mencari resep tertentu dengan mengetikan nama resep lalu menekan button search di samping kanan kotak pencarian, bisa juga dengan menekan enter. karna API yang digunakan menggunakan bahasa inggris ketikan nama hidangan dalam bahasa ingris, contoh : chicken, salad, pasta dll.
 
-3. ketika list card resep sudah ditampilkan, dapat di scrol atas-bawah.
+3. ketika list card resep sudah ditampilkan, dapat di scroll atas-bawah.
 
 4. Jika ingin memfilter resep piih negara atau kategori pada dropdown sehingga akan dimunculkan resep berdasarkan negara atau category yang dipilih.
 
